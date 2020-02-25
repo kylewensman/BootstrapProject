@@ -1,5 +1,17 @@
-// $bg-color: red; 
+// Bootstrap Sass Imports
+// allows you to use bootsrap variables
+@import "node_modules/bootstrap/scss/bootstrap";
 
-// body {
-//     background: $bg-color;
-// }
+// overrides theme color variable
+$theme-colors: (
+  "primary": #d95700
+);
+//overrides body background color
+$body-bg: #ededed;
+
+.jumbotron {
+    // changes background color based on element
+    background-color: #ffffff !important;
+    // adds a subtle border
+    border-top: 3px solid rgb(219, 219, 219);
+}

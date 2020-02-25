@@ -8,29 +8,48 @@
         <link rel="stylesheet" href="/css/styles.css">
     </head>
 
+    <!-- container class centers content -->
     <body class="container">
+        <!-- navbar class uses flexbox styles and includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling. -->
+        <!-- nabar-exand-lg class literally does what it says which is expanding the navigation. The opposite would be a hamburger (menu) button. -->
+        <!-- navbar-dark class makes the text white and chages the hover states -->
+        <!-- bg-primary is reference to a color theme -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <!-- navbar-brand class is used to display your company, product, or project name. -->
             <a class="navbar-brand" href="#">CompanyName</a>
 
+            <!-- navbar-toggler class is for use with our collapse plugin and other navigation toggling behaviors -->
+            <!-- navbar-toggler is responsible for the dropdown menu on mobile -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <!-- navbar-toggler-icon is literally displays an icon for mobile-->
                 <span class="navbar-toggler-icon"></span>
             </button>
-
+            <!-- collapse class defaults the content within to display none -->
+            <!-- navbar-collapse styles the content to display block and under the other navbar content-->
+            <!-- together collapse and navbar-collapse are used for grouping and hiding navbar contents by a parent breakpoint. -->
+            <!-- navbarSupportedContent is used above for the navbar-toggler data-target -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- navbar-nav class contains the styles for a ul navigation -->
+                <!-- ml-auto is for margin-left: auto -->
                 <ul class="navbar-nav ml-auto">
+                    <!-- nav-item and nav-link is needed when you start doing advanced navigations and is best just to add them from the start -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
                     </li>
+                    <!-- dropdown class is used to display dropdown under the toggle-->
+                    <!-- dropdown-toggle is used to add a arrow to the link -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
                             Products
                         </a>
+                        <!-- dropdown-menu hides the content untill it is toggled -->
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Product 1</a>
                             <a class="dropdown-item" href="#">Product 2</a>
+                            <!-- dropdown-divider adds a horizontal line -->
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Another Product</a>
                         </div>
@@ -41,16 +60,98 @@
                 </ul>
             </div>
         </nav>
-
+            <!-- jumbotron class adds padding around the element to make a focal hero element-->
             <header class="jumbotron">
+                <!-- display-4 is used when you need a heading to stand out, consider using a display heading - a larger, slightly more opinionated heading style.-->
                 <h1 class="display-4">Simple. Elegant. Awesome.</h1>
+                <!-- lead is similar to display 4 which is making the text stand out -->
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             
                 <p class="lead">
+                    <!-- btn is styles for a button and does not require html button tag -->
+                    <!-- btn-primary referse to a color theme -->
+                    <!-- btn-lg defines the size of the button -->
                     <button class="btn btn-primary btn-lg" href="#" role="button">Learn more</button>
                 </p>
             </header>
 
+            <main>
+                <!-- row and col create a table layout that is responsive -->
+                <div class="row">
+                    <section class="col">
+                        <!-- A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.  -->
+                        <!-- in this example card adds a border and padding -->
+                        <!-- mb-4 refers to margin-bottom: $spacer * 1.5 -->
+                        <div class="card mb-4">
+                            <!-- card-body adds padding and defines the body of the card -->
+                            <!-- text-center literally centers text -->
+                            <div class="card-body text-center">
+                                <!-- card-title defines the title of the card - adds a litle padding-->
+                                <h5 class="card-title">Card title</h5>
+                                <!-- card-text defines the cards text -->
+                                <p class="card-text">Some quick example text to build on the card title</p>
+                                <!-- card-link defines cards link -->
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title</p>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title</p>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- mt-sm-4 refers to margin-top: small ($spacer * 1.5) -->
+                <!-- mt-md-0 refers to margin-top: medium (0) -->
+                <section class="row mt-sm-4 mt-md-0">
+                    <!-- col-sm-12 means small devices display ratio of 12 (full width) -->
+                    <!-- col-md-8 means medium devices display ratio of 8 -->
+                    <!-- text-sm-center will center text on small devices -->
+                    <!-- text-md-left will left align on medium devices -->
+                    <div class="col-sm-12 col-md-8 text-sm-center text-md-left">
+                        <h3>An important heading</h3>
+                        <p class="lead">A sort of important subheading can go here, which is larger and gray.</p>
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </section>
+                    <!-- aside is not per say for a secondary navigation but I think fits better than section -->
+                    <aside class="col-sm-12 col-md-4">
+                        <h3 class="mb-4">Secondary Menu</h3>
+                        <!-- flex-colum is used to set a vertical direction-->
+                        <!-- nav-pills basically adds a background-->
+                        <ul class="nav flex-column nav-pills">
+                            <li class="nav-item">
+                                <!-- active indicates what page you are currently on -->
+                                <a class="nav-link active" href="#">Active</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Disabled</a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+            </main>
+            
         <script src="/js/jquery.min.js"></script>
         <script src="/js/popper.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
